@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Guevara</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="LOGOGUEVARA.png" alt="Logo" width="300">
+        <h1>Colegio Guevara</h1>
+        <a href="#" class="register-link" onclick="registrarse()">Registrarse</a>
+    </div>
+    
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" placeholder="Correo Electrónico" id="email">
+        <input type="password" placeholder="Contraseña" id="password">
+        <button onclick="iniciarSesion()">Entrar</button>
+    </div>
+
+    <div class="footer">
+        <img src="logoempresa.png" class="logo-footer">
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Aquí puedes agregar lógica para validar el inicio de sesión
+            if (email && password) {
+                alert('Iniciando sesión...');
+                // Redirigir a la página de inicio de sesión real o realizar la autenticación
+            } else {
+                alert('Por favor, complete todos los campos.');
+            }
+        }
+
+        function registrarse() {
+            window.location.href = "C:\\Users\\joaquin\\Desktop\\tpientrega2\\registrarse.html";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
