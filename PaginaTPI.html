@@ -7,21 +7,28 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="LOGOGUEVARA.png" alt="Logo" width="300">
-        <h1>Colegio Guevara</h1>
-        <a href="#" class="register-link" onclick="registrarse()">Registrarse</a>
+    <!-- Contenedor del logo y el formulario -->
+    <div class="main-container">
+        <div class="logo-container">
+            <img src="LOGOGUEVARA.png" alt="Logo Colegio" class="logo">
+            <h1>Colegio Guevara</h1>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Correo Electrónico" id="email">
+            <input type="password" placeholder="Contraseña" id="password">
+            <button onclick="iniciarSesion()">Entrar</button>
+        </div>
     </div>
-    
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <input type="text" placeholder="Correo Electrónico" id="email">
-        <input type="password" placeholder="Contraseña" id="password">
-        <button onclick="iniciarSesion()">Entrar</button>
-    </div>
+
+    <!-- Botón para registrarse (ubicado en la esquina superior derecha) -->
+    <a href="registro.html" class="register-btn">Registrarse</a>
 
     <div class="footer">
         <img src="logoempresa.png" class="logo-footer">
+        <p>© 2024 Todos los derechos reservados</p>
     </div>
 
     <script>
@@ -29,22 +36,12 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Aquí puedes agregar lógica para validar el inicio de sesión
             if (email && password) {
                 alert('Iniciando sesión...');
-                // Redirigir a la página de inicio de sesión real o realizar la autenticación
             } else {
                 alert('Por favor, complete todos los campos.');
             }
         }
-
-        function registrarse() {
-            window.location.href = "C:\\Users\\joaquin\\Desktop\\tpientrega2\\registrarse.html";
-        }
     </script>
 </body>
 </html>
-
-
-
-

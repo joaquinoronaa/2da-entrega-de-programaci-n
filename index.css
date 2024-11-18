@@ -1,111 +1,145 @@
-body{
-    background: linear-gradient(rgb(126, 2, 2), rgb(116, 24, 24), rgb(37, 2, 2));
-    text-align: center;
-    font-family: Arial, sans-serif;
+/* Restablecer márgenes y paddings por defecto */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
+    box-sizing: border-box;
 }
-.logo {
-    margin-bottom: 20px;
-}
-.button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-h1 {
-    color: white; 
-}
-.footer {
-    border-top: 2px solid black;
-    padding: 5px;
-    width: 100%;
-    text-align: left;
-    background-color: rgb(0, 0, 0);
-    position: absolute; 
-    bottom: 0; 
-}
-.footer .logo-footer {
-    float: left;
-    width: 35px; 
-    height: 35px; 
-    margin: 5px; 
-}
-.register-link {
-    position: absolute;
-    top: 20px; 
-    right: 20px; 
-    color: white; 
-    text-decoration: none; 
-    font-size: 16px; 
-}
+
+/* Estilos generales del cuerpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(170, 34, 34);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
-.container {
+/* Contenedor principal que incluye el logo y el formulario */
+.main-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center; /* Centra los elementos en la pantalla */
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la página */
+    padding-top: 20px; /* Espacio superior para no tocar el borde */
+}
+
+/* Logo y título del colegio */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 50px; /* Separación entre logo y formulario */
 }
 
 .logo {
-    margin: 20px;
-    text-align: center;
+    max-width: 150px; /* Tamaño máximo del logo */
+    margin-right: 15px; /* Espacio entre el logo y el título */
 }
 
-.register-link {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+.logo h1 {
+    font-size: 2.5rem;
     color: white;
-    border-radius: 5px;
-    text-decoration: none;
 }
 
-.footer {
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-}
-
+/* Estilos del formulario de inicio de sesión */
 .login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
 }
 
 .login-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    border-radius: 4px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .login-container button {
-    background-color: #28a745;
-    color: white;
     width: 100%;
     padding: 10px;
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Pie de página con logo y texto en la esquina inferior izquierda */
+.footer {
+    width: 100%;
+    background-color: #808080; /* Fondo gris */
+    padding: 5px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: left; /* Alineación a la izquierda */
+    color: white;
+    display: flex;
+    align-items: center; /* Alineamos verticalmente logo y texto */
+    font-size: 0.8rem;
+}
+
+.footer .logo-footer {
+    max-width: 50px; /* Reducido el tamaño del logo aún más */
+    margin-right: 8px; /* Separación más pequeña entre el logo y el texto */
+}
+
+.footer p {
+    color: white;
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px; /* Espacio cuando el logo se apila encima del formulario */
+    }
+
+    .logo {
+        max-width: 120px; /* Logo más pequeño en pantallas pequeñas */
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+
+    .footer .logo-footer {
+        max-width: 40px;
+    }
 }
