@@ -1,11 +1,10 @@
-/* Restablecer márgenes y paddings por defecto */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales del cuerpo */
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(170, 34, 34);
@@ -19,26 +18,24 @@ body {
     margin: 0;
 }
 
-/* Contenedor principal que incluye el logo y el formulario */
 .main-container {
     display: flex;
-    justify-content: center; /* Centra los elementos en la pantalla */
+    justify-content: center; 
     align-items: center;
     width: 100%;
-    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la página */
-    padding-top: 20px; /* Espacio superior para no tocar el borde */
+    height: 100vh; 
+    padding-top: 20px;
 }
 
-/* Logo y título del colegio */
 .logo-container {
     display: flex;
     align-items: center;
-    margin-right: 50px; /* Separación entre logo y formulario */
+    margin-right: 50px;
 }
 
 .logo {
-    max-width: 150px; /* Tamaño máximo del logo */
-    margin-right: 15px; /* Espacio entre el logo y el título */
+    max-width: 150px;
+    margin-right: 15px;
 }
 
 .logo h1 {
@@ -46,7 +43,6 @@ body {
     color: white;
 }
 
-/* Estilos del formulario de inicio de sesión */
 .login-container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -87,24 +83,23 @@ body {
     background-color: #0056b3;
 }
 
-/* Pie de página con logo y texto en la esquina inferior izquierda */
 .footer {
     width: 100%;
-    background-color: #808080; /* Fondo gris */
+    background-color: #808080;
     padding: 5px 15px;
     position: fixed;
     bottom: 0;
     left: 0;
-    text-align: left; /* Alineación a la izquierda */
+    text-align: left; 
     color: white;
     display: flex;
-    align-items: center; /* Alineamos verticalmente logo y texto */
+    align-items: center; 
     font-size: 0.8rem;
 }
 
 .footer .logo-footer {
-    max-width: 50px; /* Reducido el tamaño del logo aún más */
-    margin-right: 8px; /* Separación más pequeña entre el logo y el texto */
+    max-width: 50px; 
+    margin-right: 8px; 
 }
 
 .footer p {
@@ -112,7 +107,6 @@ body {
     margin: 0;
 }
 
-/* Responsividad */
 @media (max-width: 600px) {
     .main-container {
         flex-direction: column;
@@ -128,11 +122,11 @@ body {
     .logo-container {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px; /* Espacio cuando el logo se apila encima del formulario */
+        margin-bottom: 20px;
     }
 
     .logo {
-        max-width: 120px; /* Logo más pequeño en pantallas pequeñas */
+        max-width: 120px;
     }
 
     .footer {
